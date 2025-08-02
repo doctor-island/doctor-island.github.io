@@ -6,8 +6,8 @@
     <title>Derek Beyer</title>
     <style>
         body {
-            background: linear-gradient(135deg, #ff6b1a 0%, #1e88e5 100%);
-            color: #fff8e1;
+            background: linear-gradient(135deg, #0d1117 0%, #1a1e2e 50%, #0d1117 100%);
+            color: #e6edf3;
             font-family: 'Georgia', serif;
             margin: 0;
             padding: 20px;
@@ -15,7 +15,7 @@
             position: relative;
         }
         
-        /* Retro geometric pattern */
+        /* Night sky stars */
         body::before {
             content: "";
             position: fixed;
@@ -24,12 +24,15 @@
             width: 100%;
             height: 100%;
             background-image: 
-                radial-gradient(circle at 25% 25%, #fdd835, transparent 50%),
-                radial-gradient(circle at 75% 75%, #ff7043, transparent 50%),
-                radial-gradient(circle at 50% 10%, #42a5f5, transparent 50%),
-                radial-gradient(circle at 10% 60%, #fdd835, transparent 50%),
-                radial-gradient(circle at 90% 30%, #ff7043, transparent 50%);
-            opacity: 0.2;
+                radial-gradient(1px 1px at 20% 30%, #ffffff, transparent),
+                radial-gradient(1px 1px at 40% 70%, #ffffff, transparent),
+                radial-gradient(1px 1px at 90% 40%, #ffffff, transparent),
+                radial-gradient(1px 1px at 50% 50%, #ffffff, transparent),
+                radial-gradient(1px 1px at 80% 10%, #ffffff, transparent),
+                radial-gradient(1px 1px at 10% 80%, #ffffff, transparent),
+                radial-gradient(1px 1px at 60% 20%, #ffffff, transparent),
+                radial-gradient(1px 1px at 30% 90%, #ffffff, transparent);
+            opacity: 0.3;
             z-index: -1;
         }
         
@@ -40,17 +43,16 @@
         }
         
         h1 {
-            color: #fdd835;
+            color: #ff6b35;
             font-size: 3.2em;
             text-align: center;
             margin-bottom: 10px;
             font-weight: normal;
             letter-spacing: 2px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
         
         .subtitle {
-            color: #fff8e1;
+            color: #e6edf3;
             text-align: center;
             font-size: 1.2em;
             margin-bottom: 50px;
@@ -73,48 +75,37 @@
         }
         
         .link-button {
-            background: #ff7043;
-            color: #fff8e1;
+            background: #ff6b35;
+            color: #e6edf3;
             text-decoration: none;
             padding: 12px 24px;
             border-radius: 6px;
             font-weight: bold;
             transition: all 0.3s ease;
             display: inline-block;
-            border: 2px solid #ff7043;
+            border: 2px solid #ff6b35;
         }
         
         .link-button:hover {
             background: transparent;
-            color: #ff7043;
+            color: #ff6b35;
             transform: translateY(-2px);
-        }
-        
-        .link-button.secondary {
-            background: transparent;
-            color: #fdd835;
-            border-color: #fdd835;
-        }
-        
-        .link-button.secondary:hover {
-            background: #fdd835;
-            color: #1e88e5;
         }
         
         .contact {
             text-align: center;
             margin-top: 40px;
             padding: 20px;
-            border-top: 1px solid #fdd835;
+            border-top: 1px solid #ff6b35;
         }
         
         .contact a {
-            color: #fdd835;
+            color: #ff6b35;
             text-decoration: none;
         }
         
         .contact a:hover {
-            color: #ff7043;
+            text-decoration: underline;
         }
         
         /* Mobile responsiveness */
@@ -147,20 +138,16 @@
         <div class="subtitle">Writer • Civic Technologist</div>
         
         <div class="bio">
-            <p>I'm a writer and civic technologist exploring the intersection of idealism and reality through both fiction and public service. Currently developing a science fiction novel while working in content strategy for government organizations.</p>
-            
-            <p>My writing examines how we might build better worlds through sustained effort, drawing connections between speculative fiction, social theory, and practical technology work. I'm particularly interested in mid-century scientist-intellectuals and how stories shape our future possibilities.</p>
+            <p>Hi there. I'm a writer — a content strategist for government by day and a science fiction novelist by night. My work with governments enables them to better deliver digital services. My fiction explores themes of human nature, technology, civilization, and idealism.</p>
             
             <p>Based in Ann Arbor, Michigan.</p>
         </div>
         
         <div class="links">
-            <a href="https://otherworldscatalog.substack.com" class="link-button" target="_blank">Other Worlds Catalog</a>
-            <a href="mailto:dereksbeyer@gmail.com" class="link-button secondary">Get in Touch</a>
+            <a href="https://otherworldscatalog.substack.com" class="link-button" target="_blank">Other worlds catalog</a>
         </div>
         
         <div class="contact">
-            <p>Always happy to discuss science fiction, civic technology, or the practical applications of utopian thinking.</p>
             <p>Email: <a href="mailto:dereksbeyer@gmail.com">dereksbeyer@gmail.com</a></p>
         </div>
     </div>
