@@ -1,4 +1,183 @@
-#Hello
-This is my website.
-
-Neat.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Derek Beyer</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #ffffff;
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        /* Starfield background */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(2px 2px at 20% 30%, #ffffff, transparent),
+                radial-gradient(2px 2px at 40% 70%, #ffeb3b, transparent),
+                radial-gradient(1px 1px at 90% 40%, #ff9800, transparent),
+                radial-gradient(1px 1px at 50% 50%, #2196f3, transparent),
+                radial-gradient(2px 2px at 80% 10%, #ffffff, transparent),
+                radial-gradient(1px 1px at 10% 80%, #f44336, transparent);
+            z-index: -1;
+            animation: twinkle 4s ease-in-out infinite alternate;
+        }
+        
+        @keyframes twinkle {
+            0% { opacity: 0.3; }
+            100% { opacity: 0.8; }
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.3);
+            border: 3px solid #ff6b35;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 0 30px rgba(255, 107, 53, 0.3);
+            backdrop-filter: blur(5px);
+        }
+        
+        h1 {
+            color: #ffeb3b;
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px #ffeb3b;
+            letter-spacing: 3px;
+        }
+        
+        .subtitle {
+            color: #ff6b35;
+            text-align: center;
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+        
+        .bio {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 5px solid #2196f3;
+            margin: 30px 0;
+            line-height: 1.6;
+            font-size: 1.1em;
+        }
+        
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin: 40px 0;
+        }
+        
+        .link-button {
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            display: inline-block;
+        }
+        
+        .link-button:hover {
+            background: linear-gradient(45deg, #f7931e, #ff6b35);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 107, 53, 0.4);
+        }
+        
+        .link-button.secondary {
+            background: linear-gradient(45deg, #2196f3, #21cbf3);
+        }
+        
+        .link-button.secondary:hover {
+            background: linear-gradient(45deg, #21cbf3, #2196f3);
+            box-shadow: 0 10px 20px rgba(33, 150, 243, 0.4);
+        }
+        
+        .contact {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            border-top: 2px solid #ff6b35;
+        }
+        
+        .contact a {
+            color: #ffeb3b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .contact a:hover {
+            text-shadow: 0 0 10px #ffeb3b;
+        }
+        
+        /* Mobile responsiveness */
+        @media (max-width: 600px) {
+            .container {
+                margin: 10px;
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2.2em;
+                letter-spacing: 1px;
+            }
+            
+            .links {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .link-button {
+                width: 80%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>DEREK BEYER</h1>
+        <div class="subtitle">Writer • Civic Technologist • Steadfast Utopian</div>
+        
+        <div class="bio">
+            <p>I'm a writer and civic technologist who explores the intersection of idealism and reality through both fiction and public service. Currently developing <em>Doctor Eiland</em>, a genre-blending novel that uses supervillain tropes to examine utopianism and the moral complexities of trying to change the world.</p>
+            
+            <p>My work spans from helping governments translate complex processes into accessible language at Bloom Works, to curating speculative fiction that grapples with political and social questions. I'm particularly fascinated by mid-century scientist-intellectuals, science fiction as cultural mythology, and how vividly imagining better futures can help bring them into existence.</p>
+            
+            <p>Based in Ann Arbor, Michigan, I bring both my perspective as an autistic person and my expertise in content strategy to exploring what it means to be human in an age of technological change.</p>
+        </div>
+        
+        <div class="links">
+            <a href="https://otherworldscatalog.substack.com" class="link-button" target="_blank">Other Worlds Catalog</a>
+            <a href="mailto:dereksbeyer@gmail.com" class="link-button secondary">Get in Touch</a>
+        </div>
+        
+        <div class="contact">
+            <p>Always happy to discuss science fiction, civic technology, or the practical applications of utopian thinking.</p>
+            <p>Email: <a href="mailto:dereksbeyer@gmail.com">dereksbeyer@gmail.com</a></p>
+        </div>
+    </div>
+</body>
+</html>
