@@ -6,17 +6,16 @@
     <title>Derek Beyer</title>
     <style>
         body {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-            color: #ffffff;
-            font-family: 'Courier New', monospace;
+            background: linear-gradient(135deg, #ff6b1a 0%, #1e88e5 100%);
+            color: #fff8e1;
+            font-family: 'Georgia', serif;
             margin: 0;
             padding: 20px;
             min-height: 100vh;
             position: relative;
-            overflow-x: hidden;
         }
         
-        /* Starfield background */
+        /* Retro geometric pattern */
         body::before {
             content: "";
             position: fixed;
@@ -25,57 +24,44 @@
             width: 100%;
             height: 100%;
             background-image: 
-                radial-gradient(2px 2px at 20% 30%, #ffffff, transparent),
-                radial-gradient(2px 2px at 40% 70%, #ffeb3b, transparent),
-                radial-gradient(1px 1px at 90% 40%, #ff9800, transparent),
-                radial-gradient(1px 1px at 50% 50%, #2196f3, transparent),
-                radial-gradient(2px 2px at 80% 10%, #ffffff, transparent),
-                radial-gradient(1px 1px at 10% 80%, #f44336, transparent);
+                radial-gradient(circle at 25% 25%, #fdd835, transparent 50%),
+                radial-gradient(circle at 75% 75%, #ff7043, transparent 50%),
+                radial-gradient(circle at 50% 10%, #42a5f5, transparent 50%),
+                radial-gradient(circle at 10% 60%, #fdd835, transparent 50%),
+                radial-gradient(circle at 90% 30%, #ff7043, transparent 50%);
+            opacity: 0.2;
             z-index: -1;
-            animation: twinkle 4s ease-in-out infinite alternate;
-        }
-        
-        @keyframes twinkle {
-            0% { opacity: 0.3; }
-            100% { opacity: 0.8; }
         }
         
         .container {
-            max-width: 800px;
+            max-width: 700px;
             margin: 0 auto;
-            background: rgba(0, 0, 0, 0.3);
-            border: 3px solid #ff6b35;
-            border-radius: 15px;
-            padding: 40px;
-            box-shadow: 0 0 30px rgba(255, 107, 53, 0.3);
-            backdrop-filter: blur(5px);
+            padding: 60px 40px;
         }
         
         h1 {
-            color: #ffeb3b;
-            font-size: 3em;
+            color: #fdd835;
+            font-size: 3.2em;
             text-align: center;
             margin-bottom: 10px;
-            text-shadow: 0 0 20px #ffeb3b;
-            letter-spacing: 3px;
+            font-weight: normal;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
         
         .subtitle {
-            color: #ff6b35;
+            color: #fff8e1;
             text-align: center;
-            font-size: 1.3em;
-            margin-bottom: 30px;
-            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 50px;
+            font-style: italic;
         }
         
         .bio {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 25px;
-            border-radius: 10px;
-            border-left: 5px solid #2196f3;
-            margin: 30px 0;
-            line-height: 1.6;
+            line-height: 1.7;
             font-size: 1.1em;
+            margin: 40px 0;
+            text-align: left;
         }
         
         .links {
@@ -83,53 +69,52 @@
             flex-wrap: wrap;
             gap: 20px;
             justify-content: center;
-            margin: 40px 0;
+            margin: 50px 0;
         }
         
         .link-button {
-            background: linear-gradient(45deg, #ff6b35, #f7931e);
-            color: white;
+            background: #ff7043;
+            color: #fff8e1;
             text-decoration: none;
-            padding: 15px 25px;
-            border-radius: 25px;
+            padding: 12px 24px;
+            border-radius: 6px;
             font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
             transition: all 0.3s ease;
-            border: 2px solid transparent;
             display: inline-block;
+            border: 2px solid #ff7043;
         }
         
         .link-button:hover {
-            background: linear-gradient(45deg, #f7931e, #ff6b35);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(255, 107, 53, 0.4);
+            background: transparent;
+            color: #ff7043;
+            transform: translateY(-2px);
         }
         
         .link-button.secondary {
-            background: linear-gradient(45deg, #2196f3, #21cbf3);
+            background: transparent;
+            color: #fdd835;
+            border-color: #fdd835;
         }
         
         .link-button.secondary:hover {
-            background: linear-gradient(45deg, #21cbf3, #2196f3);
-            box-shadow: 0 10px 20px rgba(33, 150, 243, 0.4);
+            background: #fdd835;
+            color: #1e88e5;
         }
         
         .contact {
             text-align: center;
             margin-top: 40px;
             padding: 20px;
-            border-top: 2px solid #ff6b35;
+            border-top: 1px solid #fdd835;
         }
         
         .contact a {
-            color: #ffeb3b;
+            color: #fdd835;
             text-decoration: none;
-            font-weight: bold;
         }
         
         .contact a:hover {
-            text-shadow: 0 0 10px #ffeb3b;
+            color: #ff7043;
         }
         
         /* Mobile responsiveness */
@@ -159,14 +144,14 @@
 <body>
     <div class="container">
         <h1>DEREK BEYER</h1>
-        <div class="subtitle">Writer • Civic Technologist • Steadfast Utopian</div>
+        <div class="subtitle">Writer • Civic Technologist</div>
         
         <div class="bio">
-            <p>I'm a writer and civic technologist who explores the intersection of idealism and reality through both fiction and public service. Currently developing <em>Doctor Eiland</em>, a genre-blending novel that uses supervillain tropes to examine utopianism and the moral complexities of trying to change the world.</p>
+            <p>I'm a writer and civic technologist exploring the intersection of idealism and reality through both fiction and public service. Currently developing a science fiction novel while working in content strategy for government organizations.</p>
             
-            <p>My work spans from helping governments translate complex processes into accessible language at Bloom Works, to curating speculative fiction that grapples with political and social questions. I'm particularly fascinated by mid-century scientist-intellectuals, science fiction as cultural mythology, and how vividly imagining better futures can help bring them into existence.</p>
+            <p>My writing examines how we might build better worlds through sustained effort, drawing connections between speculative fiction, social theory, and practical technology work. I'm particularly interested in mid-century scientist-intellectuals and how stories shape our future possibilities.</p>
             
-            <p>Based in Ann Arbor, Michigan, I bring both my perspective as an autistic person and my expertise in content strategy to exploring what it means to be human in an age of technological change.</p>
+            <p>Based in Ann Arbor, Michigan.</p>
         </div>
         
         <div class="links">
