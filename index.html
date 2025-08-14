@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,146 +15,152 @@
             min-height: 100vh;
             position: relative;
         }
-        
-        /* Night sky stars */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                radial-gradient(1px 1px at 20% 30%, #ffffff, transparent),
-                radial-gradient(1px 1px at 40% 70%, #ffffff, transparent),
-                radial-gradient(1px 1px at 90% 40%, #ffffff, transparent),
-                radial-gradient(1px 1px at 50% 50%, #ffffff, transparent),
-                radial-gradient(1px 1px at 80% 10%, #ffffff, transparent),
-                radial-gradient(1px 1px at 10% 80%, #ffffff, transparent),
-                radial-gradient(1px 1px at 60% 20%, #ffffff, transparent),
-                radial-gradient(1px 1px at 30% 90%, #ffffff, transparent);
-            opacity: 0.3;
-            z-index: -1;
-        }
-        
+
+```
+    /* Night sky stars */
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: 
+            radial-gradient(1px 1px at 20% 30%, #ffffff, transparent),
+            radial-gradient(1px 1px at 40% 70%, #ffffff, transparent),
+            radial-gradient(1px 1px at 90% 40%, #ffffff, transparent),
+            radial-gradient(1px 1px at 50% 50%, #ffffff, transparent),
+            radial-gradient(1px 1px at 80% 10%, #ffffff, transparent),
+            radial-gradient(1px 1px at 10% 80%, #ffffff, transparent),
+            radial-gradient(1px 1px at 60% 20%, #ffffff, transparent),
+            radial-gradient(1px 1px at 30% 90%, #ffffff, transparent);
+        opacity: 0.3;
+        z-index: -1;
+    }
+    
+    .container {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 60px 40px;
+    }
+    
+    h1 {
+        color: #ff6b35;
+        font-size: 3.2em;
+        text-align: center;
+        margin-bottom: 10px;
+        font-weight: normal;
+        letter-spacing: 2px;
+    }
+    
+    .subtitle {
+        color: #e6edf3;
+        text-align: center;
+        font-size: 1.2em;
+        margin-bottom: 50px;
+        font-style: italic;
+    }
+    
+    .bio {
+        line-height: 1.7;
+        font-size: 1.1em;
+        margin: 40px 0;
+        text-align: left;
+    }
+    
+    .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        margin: 50px 0;
+    }
+    
+    .link-button {
+        background: #ff6b35;
+        color: #e6edf3;
+        text-decoration: none;
+        padding: 12px 24px;
+        border-radius: 6px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        display: inline-block;
+        border: 2px solid #ff6b35;
+    }
+    
+    .link-button:hover {
+        background: transparent;
+        color: #ff6b35;
+        transform: translateY(-2px);
+    }
+    
+    .contact {
+        text-align: center;
+        margin-top: 40px;
+        padding: 20px;
+        border-top: 1px solid #ff6b35;
+    }
+    
+    .contact a {
+        color: #ff6b35;
+        text-decoration: none;
+    }
+    
+    .contact a:hover {
+        text-decoration: underline;
+    }
+    
+    /* Mobile responsiveness */
+    @media (max-width: 600px) {
         .container {
-            max-width: 700px;
-            margin: 0 auto;
-            padding: 60px 40px;
+            margin: 10px;
+            padding: 20px;
         }
         
         h1 {
-            color: #ff6b35;
-            font-size: 3.2em;
-            text-align: center;
-            margin-bottom: 10px;
-            font-weight: normal;
-            letter-spacing: 2px;
-        }
-        
-        .subtitle {
-            color: #e6edf3;
-            text-align: center;
-            font-size: 1.2em;
-            margin-bottom: 50px;
-            font-style: italic;
-        }
-        
-        .bio {
-            line-height: 1.7;
-            font-size: 1.1em;
-            margin: 40px 0;
-            text-align: left;
+            font-size: 2.2em;
+            letter-spacing: 1px;
         }
         
         .links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-            margin: 50px 0;
+            flex-direction: column;
+            align-items: center;
         }
         
         .link-button {
-            background: #ff6b35;
-            color: #e6edf3;
-            text-decoration: none;
-            padding: 12px 24px;
-            border-radius: 6px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            display: inline-block;
-            border: 2px solid #ff6b35;
-        }
-        
-        .link-button:hover {
-            background: transparent;
-            color: #ff6b35;
-            transform: translateY(-2px);
-        }
-        
-        .contact {
+            width: 80%;
             text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            border-top: 1px solid #ff6b35;
         }
-        
-        .contact a {
-            color: #ff6b35;
-            text-decoration: none;
-        }
-        
-        .contact a:hover {
-            text-decoration: underline;
-        }
-        
-        /* Mobile responsiveness */
-        @media (max-width: 600px) {
-            .container {
-                margin: 10px;
-                padding: 20px;
-            }
-            
-            h1 {
-                font-size: 2.2em;
-                letter-spacing: 1px;
-            }
-            
-            .links {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .link-button {
-                width: 80%;
-                text-align: center;
-            }
-        }
-    </style>
+    }
+</style>
+```
+
 </head>
 <body>
     <div class="container">
         <h1>DEREK BEYER</h1>
         <div class="subtitle">Writer • Civic technologist</div>
-        
-        <div class="bio">
-            <p>Hi there. I'm a writer — a content strategist for government by day and a science fiction novelist by night. 
-                
-            <p>My work with governments enables them to better deliver digital services.</p>
-                
-            <p>My fiction explores themes of human nature, technology, civilization, and idealism.</p>
+
+```
+    <div class="bio">
+        <p>Hi there. I'm a science fiction writer and civic technologist.</p>
             
-            <p>Based in Ann Arbor, Michigan.</p>
-        </div>
+        <p>As an SF writer, I explore human nature, civilization, and our place in the Universe. I'm currently working on my first novel.</p>
+            
+        <p>As a civic technologist, I work with government entities to make their public services more effective and accessible through content strategy, service design, and policy development.</p>
         
-        <div class="links">
-            <a href="https://otherworldscatalog.substack.com" class="link-button" target="_blank">Other Worlds Catalog</a>
-        </div>
-        
-        <div class="contact">
-            <p>Email: <a href="mailto:dereksbeyer@gmail.com">dereksbeyer@gmail.com</a></p>
-        </div>
+        <p>I also write a newsletter — Other Worlds Catalog — where I use speculative fiction as a lens to talk about everything else.</p>
     </div>
+    
+    <div class="links">
+        <a href="https://otherworldscatalog.substack.com" class="link-button" target="_blank">Other Worlds Catalog</a>
+    </div>
+    
+    <div class="contact">
+        <p>Email: <a href="mailto:dereksbeyer@gmail.com">dereksbeyer@gmail.com</a></p>
+    </div>
+</div>
+```
+
 </body>
-</html>
+</html> 
